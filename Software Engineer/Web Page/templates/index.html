@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<!-- Test: Flask çalışıyor mu? -->
+<div style="color: red; padding: 20px; background: yellow;">TEST: Sayfa yüklendi!</div>
+
+<div class="slider">
+
+    <!-- RADIO BUTTONS -->
+    <input type="radio" name="slide" id="slide1" checked>
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+
+    <!-- OK İŞARETLERİ -->
+    <label for="slide3" class="prev prev-slide1"></label>
+    <label for="slide1" class="prev prev-slide2"></label>
+    <label for="slide2" class="prev prev-slide3"></label>
+    <label for="slide2" class="next next-slide1"></label>
+    <label for="slide3" class="next next-slide2"></label>
+    <label for="slide1" class="next next-slide3"></label>
+
+    <!-- SLIDES -->
+    <div class="slides">
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/slide1.jpg') }}">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/slide2.jpg') }}">
+        </div>
+        <div class="slide">
+            <img src="{{ url_for('static', filename='images/slide3.jpg') }}">
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="navigation">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+    </div>
+
+</div>
+
+</body>
+</html>
