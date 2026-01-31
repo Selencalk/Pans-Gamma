@@ -1,4 +1,4 @@
-import lib1
+import Fibonacci
 import unittest
 
 class TestFibonacci(unittest.TestCase):
